@@ -1,0 +1,13 @@
+body {
+  width: 600px;
+  font-family: 'Monaco', monospace;
+  padding: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: #22455C;
+}
