@@ -1,0 +1,21 @@
+.slide {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slide:target {
+  display: block;
+}
+
+.slide {
+  line-height: 100vh;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 34px;
+}
