@@ -1,7 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  width: 600px;
   font-family: 'Monaco', monospace;
-  padding: 10px;
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+header {
+  background: #23455B;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+header svg {
+  display: inline-block;
+  max-height: 100px;
+}
+
+main {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  padding: 15px;
 }
 
 p {
@@ -10,4 +32,29 @@ p {
 
 a {
   color: #22455C;
+}
+
+hr {
+    border-top: 1px solid #333;
+    border-bottom: 0;
+    margin: 20px 0;
+}
+
+.sponsor {
+  margin: 35px 0;
+}
+
+.sponsor > h3 {
+    margin: 10px 0;
+}
+
+.sponsor > p {
+    margin: 0;
+}
+
+.sponsor img {
+    max-width:  200px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
 }
