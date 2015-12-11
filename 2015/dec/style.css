@@ -47,10 +47,6 @@ section {
   font-size: 34px;
 }
 
-.slide.gif {
-  background: white;
-}
-
 .slide.gif img {
     position: absolute;
     height: 100%;
