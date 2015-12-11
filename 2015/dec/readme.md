@@ -1,3 +1,9 @@
+#december 2015
+
+- author: @joahg
+- link: [bmtjs.org/dec-2015](http://bmtjs.org/dec-2015)
+
+
 #speaker notes
 
 - welcome (**slide 1**)
