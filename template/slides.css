@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.slide {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  line-height: 100vh;
+  text-align: center;
+  font-family: 'Trebuchet', sans-serif;
+  font-size: 34px;
+}
+
+.slide:target {
+  display: block;
+}

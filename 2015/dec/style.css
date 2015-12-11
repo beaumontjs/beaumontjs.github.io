@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 img {
   max-width: 100%;
 }
@@ -24,27 +20,9 @@ section {
 }
 
 .slide {
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  font-family: 'Open Sans';
   background: #21455D;
   color: white;
-}
-
-.slide:target {
-  display: block;
-}
-
-.slide {
-  line-height: 100vh;
-  text-align: center;
-  font-family: 'Open Sans';
-  font-size: 34px;
 }
 
 .slide.gif img {
