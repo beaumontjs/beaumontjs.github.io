@@ -10,7 +10,7 @@ Improving Your Dev Env With Zsh
 
 intro note: while Zsh can be used on any UNIX-based system (aka linux or mac), this talk is going to be centered around using it on a mac
 
-wtf is a terminal?
+what even is a terminal?
   - Terminal.app is one of the more powerful mac apps
   - emulator for bash
     - command processor that allows us to interact directly with the OS on a fundamental level.
