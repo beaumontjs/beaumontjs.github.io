@@ -4,6 +4,7 @@ var nextSlide = function() {
   if (window.currentSlide + 1 <= document.querySelectorAll('.slide').length) {
     window.currentSlide += 1;
     window.location.hash = window.currentSlide.toString();
+    document.title = document.getElementById(window.currentSlide).querySelector('h1').innerHTML;
     return true;
   }
   return false;
@@ -13,6 +14,7 @@ var prevSlide = function() {
   if (window.currentSlide - 1 >= 1) {
     window.currentSlide -= 1;
     window.location.hash = window.currentSlide.toString();
+    document.title = document.getElementById(window.currentSlide).querySelector('h1').innerHTML;
     return true;
   }
 
