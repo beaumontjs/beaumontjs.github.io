@@ -26,6 +26,7 @@ var nextIncrement = function() {
       increments = currentSlideEl.querySelectorAll('.increment:not(.shown)');
 
   if (increments.length > 0) {
+    console.log(increments[0])
     increments[0].classList.add('shown');
     return true;
   }
@@ -72,5 +73,10 @@ window.onkeydown = function(e) {
   } else if (e.which === 37 || e.which === 33) {
     e.preventDefault();
     if (!prevIncrement()) prevSlide();
+  }
+
+  if (document.querySelectorAll(':target').length == 0) {
+    window.location.hash = '#fuinternets';
+    window.location.hash = window.currentSlide.toString();
   }
 };
