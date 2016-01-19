@@ -4,7 +4,7 @@ var nextSlide = function() {
   if (window.currentSlide + 1 <= document.querySelectorAll('.slide').length) {
     window.currentSlide += 1;
     window.location.hash = window.currentSlide.toString();
-    document.title = document.getElementById(window.currentSlide).querySelector('h1').innerHTML;
+    document.title = document.getElementById(window.currentSlide).querySelector('h1').length > 0 ? document.getElementById(window.currentSlide).querySelector('h1').innerHTML : 'bmtjs';
     return true;
   }
   return false;
@@ -14,7 +14,7 @@ var prevSlide = function() {
   if (window.currentSlide - 1 >= 1) {
     window.currentSlide -= 1;
     window.location.hash = window.currentSlide.toString();
-    document.title = document.getElementById(window.currentSlide).querySelector('h1').innerHTML;
+    document.title = document.getElementById(window.currentSlide).querySelector('h1').length > 0 ? document.getElementById(window.currentSlide).querySelector('h1').innerHTML : 'bmtjs';
     return true;
   }
 
