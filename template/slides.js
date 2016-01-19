@@ -26,7 +26,6 @@ var nextIncrement = function() {
       increments = currentSlideEl.querySelectorAll('.increment:not(.shown)');
 
   if (increments.length > 0) {
-    console.log(increments[0])
     increments[0].classList.add('shown');
     return true;
   }
