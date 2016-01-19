@@ -42,7 +42,6 @@ oh my zsh
     - `sh -c "$(curl -fsSL 'https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh')"`
   - https://github.com/robbyrussell/oh-my-zsh
 * now, the fun stuff
-terminal. supercharged.
   - tab completion
     - cd ~/ **tab**
     - ip **tab**
