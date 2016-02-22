@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>beaumont.js | Using Lets Encrypt For Free SSLs!</title>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+   </head>
+   <body id="preview">
+      <h1><a id="HTTPS_on_DigitalOcean_for_0_0"></a>HTTPS on DigitalOcean for $0</h1>
+      <h3><a id="Creating_Your_Droplet_2"></a>Creating Your Droplet</h3>
+      <ol>
+         <li>Click “Create Droplet” button</li>
+         <li>Click “One-Click Apps” tab</li>
+         <li>
+            Configure your droplet
+            <ul>
+               <li>Choose “LAMP on 14.04” (or new version if available) (LAMP is short for Linux, Apache, MySQL, PHP stack)</li>
+               <li>Choose your size ($5/mo is enough for a small, simple site)</li>
+               <li>Choose DataCenter location (NY3 is default and fine to leave as is)</li>
+               <li>If you need additional options, add them</li>
+               <li>Pick a name for your droplet</li>
+               <li>Click create button</li>
+            </ul>
+         </li>
+      </ol>
+      <h3><a id="Configuring_Your_Droplet_14"></a>Configuring Your Droplet</h3>
+      <ol>
+         <li>From Droplet List page, find your droplet in the list</li>
+         <li>Click More &gt; Access Console</li>
+         <li>
+            When login prompt appears, login
+            <ul>
+               <li>username: root</li>
+               <li>password: check email for default password</li>
+            </ul>
+         </li>
+         <li>You will be forced to reset your password. Follow prompts.</li>
+         <li>Run <code>sudo apt-get update</code></li>
+         <li>Run <code>sudo apt-get install git</code></li>
+      </ol>
+      <h3><a id="Setting_Up_Your_Domain_25"></a>Setting Up Your Domain</h3>
+      <ol>
+         <li>Locate the IP address of your droplet from the Droplet List page</li>
+         <li>Navigate to your domain’s registrar to modify the DNS records for your domain</li>
+         <li>Add an <code>A Record</code> pointing to this IP address</li>
+         <li>Wait for DNS changes to propogate or flush your computer’s DNS cache</li>
+      </ol>
+      <h3><a id="Setting_Up_A_VHost_32"></a>Setting Up A VHost</h3>
+      <ol>
+         <li>
+            FTP in to your droplet using an FTP client (FileZilla on windows, Transmit on mac)
+            <ul>
+               <li>host: the IP address of your droplet</li>
+               <li>username: root</li>
+               <li>password: the password you set for the root account</li>
+            </ul>
+         </li>
+         <li>Navigate to <code>/eetc/apache2/sites-available</code></li>
+         <li>
+            Clone the following files:
+            <ul>
+               <li>000-default.conf</li>
+               <li>default-ssl.conf</li>
+            </ul>
+         </li>
+         <li>Edit the clone of both files to update the <code>ServerName</code>, <code>ServerAdmin</code>, and <code>DocumentRoot</code> directives. An example:</li>
+      </ol>
+      <pre><code>    ServerName shaynemartin<span class="hljs-class">.com</span>
+    ServerAdmin shayne@shaynemartin<span class="hljs-class">.com</span>
+    DocumentRoot /var/www/shaynemartin<span class="hljs-class">.com</span>
+</code></pre>
+      <ol start="5">
+         <li>Save both files</li>
+         <li>Navigate to the path you set for the DocumentRoot location (in this case <code>/var/www/</code>)</li>
+         <li>Create folder to match path (i.e a folder named <code>shaynemartin.com</code>)</li>
+         <li>Upload your website files to this folder</li>
+         <li>Switch back to your droplet’s console</li>
+         <li>Run <code>sudo a2ensite shaynemartin.com.conf</code> (change name to match your new .conf file)</li>
+         <li>Run <code>service apache2 restart</code></li>
+      </ol>
+      <p>Your website should now be running at your domain under <code>http://</code></p>
+      <h3><a id="Configuring_your_SSL_this_is_the_easy_part_58"></a>Configuring your SSL (this is the easy part!)</h3>
+      <ol>
+         <li>Run <code>sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt</code> to download the letsencrypt client to the server</li>
+         <li>Run <code>cd /opt/letsencypt</code> to open the folder you downloaded the client in</li>
+         <li>
+            Run <code>./letsencrypt-auto --apache -d shaynemartin.com</code> to run the letsencrypt client. Change the domain to the one you are configuring
+            <ul>
+               <li>Enter your email address</li>
+               <li>Agree to the Terms of Service</li>
+               <li>
+                  Choose Easy or Secure mode. (I recommend Secure)
+                  <ul>
+                     <li>Easy allows traffic to visit either <code>http://</code> or <code>https://</code></li>
+                     <li>Secure redirects all <code>http://</code> traffic to <code>https://</code> - the setup process for you is no different (it is all automated)</li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+         <li>Run <code>service apache2 restart</code></li>
+      </ol>
+      <p>Your website should be running at your domain under <code>https://</code> only!</p>
+   </body>
+</html>
