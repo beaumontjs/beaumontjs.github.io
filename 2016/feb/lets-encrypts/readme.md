@@ -2,4 +2,4 @@
 ##february 2016
 
 - author: @amhotdogs
-- link: [bmtjs.org/s/feb-2016/lets-encrypts/](http://bmtjs.org/s/feb-2016/lets-encrypts/)
+- link: [bmtjs.org/2016/feb/lets-encrypts/](http://bmtjs.org/2016/feb/lets-encrypts/)
