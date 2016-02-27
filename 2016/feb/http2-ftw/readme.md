@@ -85,9 +85,9 @@ http2 FTW: What it means for frontend developers
     - still lacking, but we're getting there
     - https://github.com/http2/http2-spec/wiki/Implementations
 
+*rfc 7540, published may 15, 2015*
 
-
-rfc 7540, published may 15, 2015
+## thanks to
 
 https://bagder.gitbooks.io/http2-explained/content/en/index.html
 https://http2.github.io/

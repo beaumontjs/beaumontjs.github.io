@@ -1,0 +1,3 @@
+.slide:not(.no-footer):not(.gif)::after {
+  content: 'bmtjs.org/jan-2016';
+}

@@ -1,0 +1,3 @@
+.slide:not(.no-footer):not(.gif)::after {
+  content: 'bmtjs.org/2016/feb/http2-ftw';
+}
