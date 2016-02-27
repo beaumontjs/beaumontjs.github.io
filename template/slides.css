@@ -30,3 +30,7 @@
 .increment.shown {
   opacity: 1;
 }
+
+.invisible {
+  opacity: 0;
+}

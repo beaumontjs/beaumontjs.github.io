@@ -25,6 +25,11 @@ section {
   color: white;
 }
 
+.slide:not(.gif) img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .slide.gif img {
     position: absolute;
     height: 100%;

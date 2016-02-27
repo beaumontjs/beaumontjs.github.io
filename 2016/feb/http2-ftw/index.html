@@ -49,14 +49,51 @@
         <h1>http 1.1</h1>
         <section>
           <ul>
-            <li>http 1.1 is huge</li>
-            <li>lots of tiny details</li>
-            <li>tcp support is inadequate</li>
-            <li>site sizes are consistently going up</li>
-            <li>http 1.1 is very latency-sensitive</li>
-            <li>head of line blocking</li>
+            <li class="increment">http 1.1 is huge</li>
+            <li class="increment">lots of tiny details</li>
+            <li class="increment">tcp support is inadequate</li>
+            <li class="increment">site sizes are consistently going up</li>
+            <li class="increment">http 1.1 is very latency-sensitive</li>
+            <li class="increment">head of line blocking</li>
           </ul>
         </section>
+      </main>
+    </section>
+    <section class="slide gif">
+      <img src="http://i.imgur.com/zcqvpWN.gif">
+    </section>
+    <section class="slide">
+      <main>
+        <h1>latency solutions today</h1>
+        <section>
+          <ul>
+            <li class="increment">spriting</li>
+            <li class="invisible">inlining</li>
+            <li class="invisible">concatenation</li>
+            <li class="invisible">sharding</li>
+          </ul>
+        </section>
+      </main>
+    </section>
+    <section class="slide gif">
+      <img src="http://getspritexy.com/images/sample-sprite-getspritexy.png">
+    </section>
+    <section class="slide">
+      <main>
+        <h1>latency solutions today</h1>
+        <section>
+          <ul>
+            <li>spriting</li>
+            <li class="increment">inlining</li>
+            <li class="invisible">concatenation</li>
+            <li class="invisible">sharding</li>
+          </ul>
+        </section>
+      </main>
+    </section>
+    <section class="slide no-footer">
+      <main>
+        <img src="inlining.png">
       </main>
     </section>
     <section class="slide">
@@ -66,10 +103,39 @@
           <ul>
             <li>spriting</li>
             <li>inlining</li>
-            <li>concatenation</li>
-            <li>sharding</li>
+            <li class="increment">concatenation</li>
+            <li class="increment">sharding</li>
           </ul>
         </section>
+      </main>
+    </section>
+    <section class="slide no-footer">
+      <main>
+        <img src="sharding.jpg">
+      </main>
+    </section>
+    <section class="slide">
+      <main>
+        <h1>http2: the future</h1>
+        <section>
+          <ul>
+            <li class="increment">no protocol changes</li>
+            <li class="increment">http2 is binary</li>
+            <li class="increment">multiplexed streams</li>
+            <li class="invisible">priorities and dependencies</li>
+            <li class="invisible">server push</li>
+          </ul>
+        </section>
+      </main>
+    </section>
+    <section class="slide gif">
+      <main>
+        <img src="multiplex-1.png">
+      </main>
+    </section>
+    <section class="slide no-footer">
+      <main>
+        <img src="multiplex-2.png">
       </main>
     </section>
     <section class="slide">
@@ -80,8 +146,8 @@
             <li>no protocol changes</li>
             <li>http2 is binary</li>
             <li>multiplexed streams</li>
-            <li>priorities and dependencies</li>
-            <li>server push</li>
+            <li class="increment">priorities and dependencies</li>
+            <li class="increment">server push</li>
           </ul>
         </section>
       </main>
@@ -91,14 +157,14 @@
         <h1>how http2 will affect web dev</h1>
         <section>
           <ul>
-            <li>popular workarounds for http 1.1 are detrimental to http2
+            <li class="increment">popular workarounds for http 1.1 are detrimental to http2
               <ul>
                 <li>spriting and inlining</li>
                 <li>concatenation</li>
                 <li>etc</li>
               </ul>
             </li>
-            <li>we do have to still consider http 1.1 users as well, for awhile longer</li>
+            <li class="increment">we do have to still consider http 1.1 users as well, for awhile longer</li>
           </ul>
         </section>
       </main>
@@ -108,11 +174,11 @@
         <h1>http2 implementations</h1>
         <section>
           <ul>
-            <li>firefox, google, and twitter have added support for http2</li>
-            <li>safari and microsoft are close behind</li>
-            <li>latest nginx versions support http2</li>
-            <li>apache httpd has an http2 module</li>
-            <li>https://github.com/http2/http2-spec/wiki/Implementations</li>
+            <li class="increment">firefox, google, and twitter have added support for http2</li>
+            <li class="increment">safari and microsoft are close behind</li>
+            <li class="increment">latest nginx versions support http2</li>
+            <li class="increment">apache httpd has an http2 module</li>
+            <li class="increment">https://github.com/http2/http2-spec/wiki/Implementations</li>
           </ul>
         </section>
       </main>
