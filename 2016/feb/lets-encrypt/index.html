@@ -69,6 +69,8 @@
       <pre><code>    ServerName shaynemartin<span class="hljs-class">.com</span>
     ServerAdmin shayne@shaynemartin<span class="hljs-class">.com</span>
     DocumentRoot /var/www/shaynemartin<span class="hljs-class">.com</span>
+    SSLProtocol all -SSLv2 -SSLv3
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubdomains"
 </code></pre>
       <ol start="5">
          <li>Save both files</li>
@@ -76,6 +78,7 @@
          <li>Create folder to match path (i.e a folder named <code>shaynemartin.com</code>)</li>
          <li>Upload your website files to this folder</li>
          <li>Switch back to your droplet’s console</li>
+         <li>Run <code>sudo a2enmod headers</code></li>
          <li>Run <code>sudo a2ensite shaynemartin.com.conf</code> (change name to match your new .conf file)</li>
          <li>Run <code>service apache2 restart</code></li>
       </ol>
