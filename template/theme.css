@@ -19,6 +19,10 @@ section {
   font-family: monospace;
 }
 
+.wifi {
+  margin-top: 20px;
+}
+
 .slide {
   font-family: 'Open Sans';
   background: #21455D;
