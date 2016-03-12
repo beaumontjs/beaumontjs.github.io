@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Frontend SPOF - CashWilliams</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -152,6 +152,10 @@
 						</video>
 				</section>
 
+				<section>
+					<h2>So now what?</h2>
+				</section>
+
 				<section data-background="./img/confused.gif">
 				</section>
 
@@ -191,6 +195,16 @@
   return t;
 }(document, "script", "twitter-wjs"));&lt;/script&gt;
 					</code></pre>
+				</section>
+
+				<section>
+					<h2>rel=preload on Link Tag</h2>
+					<pre><code>
+&lt;link rel="preload" href="[...]" as="style" onload="this.rel='stylesheet'"&gt;
+&lt;noscript&gt;&lt;link rel="stylesheet" href="[...]"&gt;&lt;/noscript&gt;
+					</code></pre>
+					<p>Stuff like Font Awesome can wait.</p>
+					<p><a href="https://github.com/filamentgroup/loadCSS/">loadCSS</a> polyfill</p>
 				</section>
 
 				<section>
