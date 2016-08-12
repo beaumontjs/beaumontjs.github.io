@@ -31,10 +31,11 @@
     </header>
     <main>
       <h1>Our Next Meetup</h1>
-      <p>Our June meetup will be on June 27 at the Capital One offices in Beaumont. More location/rsvp info is available on <a href="http://www.meetup.com/beaumontjs/events/231759139/">Meetup</a></p>
-      <!--<h1>Our Last Meetup</h1>
-      <p>The April meetup was held April 25 at 6pm at the Capital One Office in the Edison Plaza. See the wrap-up email here: <a href="https://gist.github.com/JoahG/7cde792a1a06bb20a45d20b6d12de185">email</a></p>
--->
+      <p class="next-meetup inactive">The <span class="meetup-title"></span> will be on <span class="meetup-day"></span> at <span class="meetup-time"></span> at <a class="meetup-venue"></a> in <span class="meetup-city"></span>. More location/rsvp info is available on <a class="meetup-link">Meetup</a></p>
+
+      <!-- <h1>Our Last Meetup</h1>
+      <p class="prev-meetup inactive">The <span class="meetup-title"></span> was on <span class="meetup-day"></span> at <span class="meetup-time"></span> at <a class="meetup-venue"></a> in <span class="meetup-city"></span>. See the wrap-up email here: <a href="https://gist.github.com/JoahG/7cde792a1a06bb20a45d20b6d12de185">email</a></p> -->
+
       <h1>About</h1>
       <p>
         beaumont.js is a monthly meetup for web developers in the Beaumont, Texas area. Come discuss what you've been working on and learning, and get a chance to meet other people in the area passionate about programming for the web.
@@ -71,29 +72,32 @@
     </main>
     
     <!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','//connect.facebook.net/en_US/fbevents.js');
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '998604583533203');
-fbq('track', "PageView");</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=998604583533203&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+    fbq('init', '998604583533203');
+    fbq('track', "PageView");</script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=998604583533203&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-45765973-14', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-45765973-14', 'auto');
+      ga('send', 'pageview');
 
-</script>
+    </script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
