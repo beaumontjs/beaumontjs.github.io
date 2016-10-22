@@ -9,7 +9,7 @@ function addMeetupInfo(Meetup, which) {
   $('.meetup-day', $(context)).text(day);
   $('.meetup-time', $(context)).text(time);
   $('.meetup-venue', $(context)).text((Meetup.venue.name == 'Capital One') ? 'the Capital One offices' : Meetup.venue.name);
-  $('.meetup-venue', $(context)).attr('href', 'https://www.google.com/maps/@' + Meetup.venue.lat.toString() + ',' + Meetup.venue.lon.toString() + ',15z');
+  // $('.meetup-venue', $(context)).attr('href', 'https://www.google.com/maps/@' + Meetup.venue.lat.toString() + ',' + Meetup.venue.lon.toString() + ',15z');
   $('.meetup-city', $(context)).text(Meetup.venue.city);
   $('.meetup-link', $(context)).attr('href', Meetup.link);
 
