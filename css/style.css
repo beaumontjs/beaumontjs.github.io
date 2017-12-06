@@ -61,4 +61,5 @@ hr {
     float: left;
     margin-right: 20px;
     margin-bottom: 15px;
+    max-height: 74px;
 }
